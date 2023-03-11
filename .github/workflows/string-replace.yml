@@ -1,4 +1,4 @@
-name: Replace wp-json in HTML
+name: Replace wp-json in HTML and JS
 
 on:
   push:
@@ -13,11 +13,17 @@ jobs:
 
       - name: Replace wp-json
         run: |
-          find . -name "*.html" -type f -print0 | xargs -0 sed -i 's/\/wp-json/https:\/\/rreya.com\/wp-json/g'
+          find . -name "*.html" -o -name "*.js" -type f -print0 | xargs -0 sed -i 's/\/wp-json/https:\/\/rreya.com\/wp-json/g'
           
       - name: Commit Changes
         run: |
           git config --global user.email "aravind_n_c@yahoo.co.in"
-          git config --global user.name "GIT Workflow"
+          git config --global user.name "Aravind NC"
           git commit -am "Replace /wp-json with https://rreya.com/wp-json"
           git push
+
+      - name: Allow github-actions bot to push changes
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{secrets.PAT_TOKEN}}
+          event-type: allow-bot-push
