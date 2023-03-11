@@ -1,4 +1,4 @@
-name: Replace wp-json in HTML and JS
+name: Replace wp-json
 
 on:
   push:
