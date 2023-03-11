@@ -15,8 +15,6 @@ jobs:
       - name: Replace wp-json
         run: |          
           find . -type f \( -name "*.js" -o -name "*.html" \) -exec sed -i 's/\/wp-json/https:\/\/rreya.com\/wp-json\//g' {} +
-
-
           
       - name: Commit Changes
         run: |
