@@ -24,6 +24,6 @@ jobs:
           git push
 
       - name: Allow github-actions bot to push changes
-        uses: peter-evans/repository-dispatch@v1
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
