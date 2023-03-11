@@ -15,7 +15,7 @@ jobs:
       - name: Replace Action
       - uses: flcdrg/replace-multiple-action@v1
         with:
-            files: '*'
+            files: '**'
             find: '[{ "find": "wp-json", "replace": "https://rreya.com/wp-json"}]'
             prefix: '(^|\\s+|\\()'
             suffix: '($|\\s+|\\))'
