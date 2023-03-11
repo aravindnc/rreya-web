@@ -24,6 +24,9 @@ jobs:
           git config --global user.name "Aravind NC"
           git commit -am "Replace /wp-json with https://rreya.com/wp-json"
           git push
+        with:
+          token: ${{secrets.PAT_TOKEN}}with:
+          token: ${{secrets.PAT_TOKEN}}
 
       - name: Allow github-actions bot to push changes
         uses: peter-evans/repository-dispatch@v1
