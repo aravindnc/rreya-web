@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --global user.email "aravind_n_c@yahoo.co.in"
           git config --global user.name "Aravind NC"
-          git commit -am "Replace /wp-json with https://rreya.com/wp-json"
+          git commit -am "[Automation] Cleanup for publishing."
           # git push
 
       - name: Fetch Publish Branch
