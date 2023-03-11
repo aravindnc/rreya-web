@@ -13,7 +13,7 @@ jobs:
         
         
       - name: Replace Action
-        uses: datamonsters/replace-action@latest
+        uses: datamonsters/replace-action@2
         with:
           files: '*'
           replacements: '/wp-json=https://rreya.com/wp-json'
