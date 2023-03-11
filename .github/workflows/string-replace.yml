@@ -13,7 +13,7 @@ jobs:
         
         
       - name: Replace Action
-      - uses: flcdrg/replace-multiple-action@v1
+      - uses: flcdrg/replace-multiple-action@v1.0.143
         with:
             files: '**'
             find: '[{ "find": "wp-json", "replace": "https://rreya.com/wp-json"}]'
