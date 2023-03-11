@@ -10,10 +10,18 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+        
+        
+      - name: Replace Action
+        uses: datamonsters/replace-action
+        with:
+          files: '*'
+          replacements: '/wp-json=https://rreya.com/wp-json'
 
-      - name: Replace wp-json
-        run: |
-          find . -name "*.html" -o -name "*.js" -type f -print0 | xargs -0 sed -i 's/\/wp-json/https:\/\/rreya.com\/wp-json/g'
+
+      # name: Replace wp-json
+      # run: |
+      #  find . -name "*.html" -o -name "*.js" -type f -print0 | xargs -0 sed -i 's/\/wp-json/https:\/\/rreya.com\/wp-json/g'
           
       - name: Commit Changes
         run: |
