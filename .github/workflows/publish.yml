@@ -33,8 +33,7 @@ jobs:
       - name: Replace wp-json
         run: |          
           find . -type f \( -name "*.js" -o -name "*.html" -o -name "*.xml" \) -exec sed -i 's/rreya.com\/wp-json/admin.rreya.com\/wp-json/g' {} +
-          find . -type f \( -name "*.js" -o -name "*.html" -o -name "*.xml" \) -exec sed -i 's/http:\/\/rreya.com/https:\/\/rreya.com/g' {} +
-          find . -type f \( -name "*.js" -o -name "*.html" -o -name "*.xml" \) -exec sed -i 's/http:\/\/admin.rreya.com/https:\/\/admin.rreya.com/g' {} +
+          find . -type f \( -name "*.js" -o -name "*.html" -o -name "*.xml" \) -exec sed -i 's/http:/https:/g' {} +
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
